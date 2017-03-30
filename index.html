@@ -8,8 +8,13 @@
                 margin:0;
                 padding:0;
             }
-            body, html {
+            html {
                 
+            }
+            body {
+                background-color:#000;
+                background-image:url('./image/body_bg.jpg');
+                background-repeat:repeat-x;
             }
             .container {
                 position:relative;
@@ -17,15 +22,13 @@
                 margin:0 auto;
                 display:flex;
                 flex-direction:column;
-                height:100%;
-                max-width: 860px;
+                max-width: 900px;
             }
             .main-header {
                 height: 110px;
                 background-image: url('./image/header_bg.jpg');
             }
             .main-header, .main-footer {
-                background-color:#CCC;
                 width:100%;
             
             }
@@ -47,39 +50,45 @@
             }
             .main-content {
                 flex:1;
-                background-color:antiquewhite;
-                margin-bottom:100px;
-                border-bottom-left-radius: 30px;
-                border-bottom-right-radius: 30px;
+                background-color:#a51b09;
+                margin-bottom:55px;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                background-image:url('./image/columns_bg.jpg');
+                background-position-y: 424px;
+                background-repeat: no-repeat;
+    
             }
             .main-sidebar {
-                background-color:blue;
                 width:30%;
                 float:left;
                 flex:1;
-                border-bottom-left-radius: 30px;
+                border-bottom-left-radius: 20px;
             }
             .content-right {
-                background-color:blueviolet;
                 width:70%;
-                position:absolute;
                 left:30%;
-                height:200px;
                 flex:1;
+                float:right;
             }
 
             nav.main-nav ul {
                 list-style-type:none;
                 background-color:#CC0000;
+                color:#FFF;
             }
             nav.main-nav li {
                 display:inline-block;
                 text-align:center;
-                width:11%;
+                width: 13.8%;
+            }
+            nav.main-nav ul li:hover  ul  {
+                display:block;
             }
             nav.main-nav a {
                 display:inline-block;
-                padding:10px 20px;
+                padding:10px 0;
+                width:100%;
                 font-weight:bold;
                 color:#FFF;
                 text-decoration:none;
@@ -98,6 +107,9 @@
             .main-sidebar li {
 
             }
+            .main-sidebar ul li:last-child {
+                
+            }
             .main-sidebar a {
                 color:#FFF;
                 display:block;
@@ -113,6 +125,80 @@
                 background: -ms-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
                 background: linear-gradient(to bottom, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827', GradientType=0 );
+            }
+            ul.social-icons, ul.bottom-links {
+                text-align: center;
+                list-style-type:none;
+            }
+            .social-icons li, .bottom-links li {
+                display:inline-block;
+                margin:0 5px;
+            }
+            ul.social-icons img {
+                width:50px;
+            }
+            .bottom-links li {
+                margin-top:30px;
+            }
+            .bottom-links a {
+                color:#FFF;
+                text-decoration:none;
+                font-weight:bold;
+            }
+            span.divider {
+                color:#FFF;
+                margin-left:15px;
+            }
+            ul.main-subnav {
+                display: none;
+                position: absolute;
+                width: 150px;
+                background-color:#000 !important;
+            }
+            
+            .main-subnav li {
+                width:100% !important;
+            }
+
+            footer p {
+                text-align:center;
+                color:#FFF;
+                margin:15px 0 0 7px;
+            }
+            ul.bottom-icon img {
+                width:150px;
+                margin-top:20px;
+            }
+            .content-inner-left {
+                width:46%;
+                padding:2%;
+                flex:1;
+            }
+            .content-inner-right {
+                width:46%;
+                float:right;
+                padding:2%;
+                flex:1;
+            }
+            .left-content-links {
+                list-style-type:none;
+                color:#FFF;
+            }
+            .left-content-links li {
+                margin:15px 0;
+                color:#FFF;
+            }
+            .left-content-links a {
+                color:#FFF;
+            }
+            .white-txt {
+                color:#FFF;
+            }
+            .center-txt {
+                text-align: center;
+            }
+            .body-h1 {
+                margin:15px 0;
             }
         </style>
     </head>
@@ -133,9 +219,39 @@
             <div class="main-content">
                 <nav class="main-nav">
                     <ul>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
+                        <li>Link
+                            <ul class="main-subnav">
+                                <li><a href="#">Sub link</a></li>
+                                <li><a href="#">Sub link</a></li>
+                                <li><a href="#">Sub link</a></li>
+                                <li><a href="#">Sub link</a></li>
+                                <li><a href="#">Sub link</a></li>
+                            </ul>
+                        </li>
+                        <li>Link
+                            <ul class="main-subnav">
+                                <li><a href="#">Sub link</a></li>
+                                <li><a href="#">Sub link</a></li>
+                                <li><a href="#">Sub link</a></li>
+                                <li><a href="#">Sub link</a></li>
+                                <li><a href="#">Sub link</a></li>
+                            </ul>
+                        </li>
+                        <li>Link
+                            <ul class="main-subnav">
+                                <li><a href="#">Sub link</a></li>
+                                <li><a href="#">Sub link</a></li>
+                                <li><a href="#">Sub link</a></li>
+                                <li><a href="#">Sub link</a></li>
+                                <li><a href="#">Sub link</a></li>
+                                <li><a href="#">Sub link</a></li>
+                                <li><a href="#">Sub link</a></li>
+                                <li><a href="#">Sub link</a></li>
+                                <li><a href="#">Sub link</a></li>
+                                <li><a href="#">Sub link</a></li>
+                                <li><a href="#">Sub link</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#">Link</a></li>
                         <li><a href="#">Link</a></li>
                         <li><a href="#">Link</a></li>
@@ -143,7 +259,7 @@
                     </ul>
                 </nav>
                 <div class="gallery">
-                    gallery
+                    
                 </div>
                 <aside class="main-sidebar">
                     <ul class="side-nav">
@@ -157,10 +273,96 @@
                     </ul>
                 </aside>
                 <div class="content-right">
-                    contnet right
+                    <div class="content-inner-right">
+                        <ul class="left-content-links center-txt">
+                            <li><a href="#">Canvas has replace</a></li>
+                            <li><a href="#">blackboard</a></li>
+                            <li><a href="#">instructions</a></li>
+                        </ul>
+                        <div class="white-txt">
+                            <h1 class="body-h1">Calandar of Events</h1>
+                            <p>Spring Vendor Fair</p>
+                            <p>3/14/2017 - 3/16/2017</p>
+                            <p>Dr. Neil Shubin</p>
+                            <p>3/15/2017</p>
+                            <p>12:00 PM</p>
+                            <p>FCC Concert Band</p>
+                            <p>3/15/2017</p>
+                            <p>7:30 PM</p>
+                            <p>Careers and Majors: Tools and Tips</p>
+                            <p>3/16/2017</p>
+                            <p>9:00 AM - 10:00 AM</p>
+
+                        </div>
+                         
+                        
+                    </div>
+                    <div class="content-inner-left"> 
+                    
+                        <ul class="left-content-links">
+                            <li><a href="#">Email, WebAdvisor, & Canvas login steps</a></li>
+                            <li><a href="#">Questions about changes to DACA?</a></li>
+                            <li><a href="#">Request a Transcript</a></li>
+                        </ul>
+                        <div class="white-txt">
+
+                            <h1 class="body-h1">Calandar of Events</h1>
+                            <p>Spring Vendor Fair</p>
+                            <p>3/14/2017 - 3/16/2017</p>
+                            <p>Dr. Neil Shubin</p>
+                            <p>3/15/2017</p>
+                            <p>12:00 PM</p>
+                            <p>FCC Concert Band</p>
+                            <p>3/15/2017</p>
+                            <p>7:30 PM</p>
+                            <p>Careers and Majors: Tools and Tips</p>
+                            <p>3/16/2017</p>
+                            <p>9:00 AM - 10:00 AM</p>
+                        </div>
+                         
+                    </div>
                 </div>
             </div>
-            <footer class="main-footer">(c) created by lucas phan</footer>    
+            <footer class="main-footer">
+                <ul class="social-icons">
+                    <li><img src="./image/icon1.jpg" alt="image1"></li>
+                    <li><img src="./image/icon2.jpg" alt="image1"></li>
+                    <li><img src="./image/icon3.jpg" alt="image1"></li>
+                    <li><img src="./image/icon4.jpg" alt="image1"></li>
+                    <li><img src="./image/icon5.jpg" alt="image1"></li>
+                    <li><img src="./image/icon6.jpg" alt="image1"></li>
+                    <li><img src="./image/icon7.jpg" alt="image1"></li>
+                    <li><img src="./image/icon8.jpg" alt="image1"></li>
+                </ul>
+                <ul class="bottom-links">
+                    <li><a href="#">link1</a><span class="divider">|</span></li>
+                    <li><a href="#">link1</a><span class="divider">|</span></li>
+                    <li><a href="#">link1</a><span class="divider">|</span></li>
+                    <li><a href="#">link1</a><span class="divider">|</span></li>
+                    <li><a href="#">link1</a><span class="divider">|</span></li>
+                    <li><a href="#">link1</a><span class="divider">|</span></li>
+                    <li><a href="#">link1</a><span class="divider">|</span></li>
+                    <li><a href="#">link1</a></li>
+                </ul>
+
+                 <ul class="social-icons bottom-icon">
+                    <li><img src="./image/bottom1.jpg" alt="image1"></li>
+                    <li><img src="./image/bottom2.jpg" alt="image1"></li>
+                </ul>
+
+                <ul class="bottom-links">
+                    <li><a href="#">link1</a><span class="divider">|</span></li>
+                    <li><a href="#">link1</a><span class="divider">|</span></li>
+                    <li><a href="#">link1</a><span class="divider">|</span></li>
+                    <li><a href="#">link1</a><span class="divider">|</span></li>
+                    <li><a href="#">link1</a></li>
+                </ul>
+                <p>Fresno City College - 1101 E. University Avenue Fresno, Ca. 93741.  (559) 442-4600</p>
+                <p>©2017  State Center Community College District. All Rights Reserved. </p>
+                <p>This site meets Section 508 Accessibility Standards. Technical Assistance: Help Desk. System errors: Webmaster. Campus Information: Contact Us, Terms of Use and Privacy Policy</p>
+
+           
+            </footer>    
        </div>
     </body>
 </html>
